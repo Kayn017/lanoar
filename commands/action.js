@@ -1,8 +1,11 @@
+const { prefix } = require('../config.json');
+
 module.exports = 
 {
     name: 'action',
     args: true,
-	description: 'Lanoar effectue une action',
+    description: 'Lanoar effectue une action',
+    usage: `${prefix}action [<type d'action>]`,
     execute(message, args)
     {
         const rnd = require("../library/getRandomInt.js");

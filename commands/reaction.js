@@ -1,8 +1,11 @@
+const { prefix } = require('../config.json');
+
 module.exports = 
 {
     name: 'reaction',
     args: true,
-	description: 'Réagit a un évenement',
+    description: 'Lanoar réagit a un évenement',
+    usage: `${prefix}reaction <type de la reaction>`,
     execute(message, args)
     {
         const fs = require('fs');

@@ -1,8 +1,11 @@
+const { prefix } = require('../config.json');
+
 module.exports = 
 {
     name: 'ping',
     args: false,
-	description: 'Ping!',
+    usage: `${prefix}ping`,
+	description: 'Ping?',
     execute(message, args)
     {
         console.log("Pong.")
