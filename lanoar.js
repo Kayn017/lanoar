@@ -5,11 +5,6 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 
 
-//déclaration des actions
-const { actionCombat, actionSocial, actionAgilite, actionFouille} = require('./action.json');
-const action = actionCombat.concat(actionSocial).concat(actionAgilite).concat(actionFouille);
-
-
 //inventaire
 let { arme, armure, objets } = require('./inventaire.json');
 
@@ -71,80 +66,7 @@ client.on('message', message =>
     
     
     
-    /*if(command === 'ping') //commande ping
-    {
-        client.commands.get('ping').execute(message, args);
-    }
-
-    if(command === 'action')
-    {
-        if(args[0] === 'random' || args.length == 0)
-        {
-            let valeur = getRandomInt(action.length);
-            message.channel.send(action[valeur]);
-            message.delete();
-        }
-
-        if(args[0] === 'combat')
-        {
-            let valeur = getRandomInt(actionCombat.length);
-            message.channel.send(actionCombat[valeur]);
-            message.delete();
-        }
-
-        if(args[0] === 'agilité')
-        {
-            let valeur = getRandomInt(actionAgilite.length);
-            message.channel.send(actionAgilite[valeur]);
-            message.delete();
-        }
-
-        if(args[0] === 'social')
-        {
-            let valeur = getRandomInt(actionSocial.length);
-            message.channel.send(actionSocial[valeur]);
-            message.delete();
-        }
-
-        if(args[0] === 'fouille')
-        {
-            let valeur = getRandomInt(actionFouille.length);
-            message.channel.send(actionFouille[valeur]);
-            message.delete();
-        }
-        
-    }
-
-    if(command === 'rip')
-    {
-        const rnd = getRandomInt(3);
-        message.channel.send({files : ['.\\gif\\rip' + rnd + '.gif']});
-        message.delete();
-    }
-
-    if(command === 'angry')
-    {
-        const rnd = getRandomInt(5);
-        message.channel.send({files : ['.\\gif\\angry' + rnd + '.gif']});
-        message.delete();
-    }
-
-    if(command === 'happy')
-    {
-        const rnd = getRandomInt(4);
-        message.channel.send({files : ['.\\gif\\happy' + rnd + '.gif']});
-        message.delete();
-    }
-
-    if(command === 'dé')
-    {
-        if(args.length > 0)
-            message.channel.send("!" + args[0] + "d20");
-        else
-            message.channel.send("!1d20");
-        
-        message.delete();
-    }
+    /*
 
     if(command === 'aide')
     {
@@ -189,11 +111,7 @@ client.on('message', message =>
 
 
 
-//randomizer de nombres entiers
-function getRandomInt(max) 
-{
-    return Math.floor(Math.random() * Math.floor(max));
-}
+
 
 //debug : affichage des logs 
 function affLog(username, text)
