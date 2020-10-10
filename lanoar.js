@@ -16,8 +16,21 @@ let { arme, armure, objets } = require('./inventaire.json');
 
 
 
-
+//on créé un nouveau client
 const client = new Discord.Client();
+
+//on ajoute les commandes au bot
+client.commands = new Discord.Collection();
+const commandFiles = fs.readdirSync("./commands").filter(file => file.endsWith('.js'));
+
+for(const file of commandFiles)
+{
+    //pour chaque fichier js trouvé, on créé une nouvelle commande
+    const cmd = require(`./commands/${file}`);
+    client.commands.set(cmd.name, cmd);
+}
+
+
 
 //EventListener pour la connexion du bot
 client.once('ready', () => {
@@ -35,15 +48,32 @@ client.on('message', message =>
 
     //on chope les arguments
     const args = message.content.slice(prefix.length).split(' ');
-    const command = args.shift().toLowerCase(); //on extrait la commande
+    const commandName = args.shift().toLowerCase(); //on extrait la commande
 
     
 
     affLog(message.author.username, message.content); //debug : affichage sur la console
 
-    if(command === 'ping') //commande ping
+    if(!client.commands.has(commandName)) return; //si la commande n'existe pas, osef
+
+    const command = client.commands.get(commandName);
+
+    try
     {
-        message.channel.send("pong");
+        command.execute(message, args);
+    }
+    catch(erreur)
+    {
+        console.error(erreur);
+        message.reply("Problème dans la commande");
+    }
+    
+    
+    
+    
+    /*if(command === 'ping') //commande ping
+    {
+        client.commands.get('ping').execute(message, args);
     }
 
     if(command === 'action')
@@ -152,7 +182,7 @@ client.on('message', message =>
         message.channel.send({files : ['.\\gif\\end.jpg']});
         message.channel.send("C'était vraiment le meilleur scénario du monde !! ");
         message.delete();
-    }
+    }  */
 
     
 });
