@@ -10,7 +10,7 @@ module.exports =
     {
         const Discord = require('discord.js');
 
-        let desc;
+        let desc = "";
 
         if(!args[0])  
         {      
@@ -25,7 +25,7 @@ module.exports =
             {
                 if(cmd.name == args[0])
                 {
-                    desc = cmd.name + " : " + cmd.description + "\n";
+                    desc += cmd.name + " : " + cmd.description + "\n";
                     desc += "Synthaxe " + cmd.usage + "\n";
                 }
                 

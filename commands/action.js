@@ -5,7 +5,7 @@ module.exports =
     name: 'action',
     args: true,
     description: 'Lanoar effectue une action',
-    usage: `${prefix}action [<type d'action>]`,
+    usage: `${prefix}action [<type d'action>] \nActions possibles : random, combat, agilité, social, fouille`,
     execute(message, args)
     {
         const rnd = require("../library/getRandomInt.js");
