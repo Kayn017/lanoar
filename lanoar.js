@@ -63,50 +63,6 @@ client.on('message', message =>
         message.reply("Problème dans la commande");
     }
     
-    
-    
-    
-    /*
-
-    if(command === 'aide')
-    {
-        if(args[0] == 'action')
-        {
-            const embed = new Discord.MessageEmbed()
-                                    .setTitle("Aide pour les actions")
-                                    .setColor(0x1e80d6)
-                                    .setDescription("L'aide de votre Lanoar favori :D \n \n !action ou !action random : fais une action au hasard \n !action combat : fais une action de combat \n !action social : fais une action de social \n !action agilité : montre son agilité \n !action fouille : fouille un endroit");
-            message.channel.send(embed);
-            message.delete();
-        }
-        else if(args[0] == 'reaction')
-        {
-            const embed = new Discord.MessageEmbed()
-                        .setTitle("Aide pour les réactions")
-                        .setColor(0x1e80d6)
-                        .setDescription("L'aide de votre Lanoar favori :D \n \n !angry : montre son énervement \n !rip : pleure la mort d'un camarade tombé au combat \n !happy : exprime sa joie et sa bonne humeur");
-            message.channel.send(embed);
-            message.delete();
-        }
-        else
-        {
-            const embed = new Discord.MessageEmbed()
-                                    .setTitle("Aide")
-                                    .setColor(0x1e80d6)
-                                    .setDescription("L'aide de votre Lanoar favori :D \n \n !aide : affiche ce message (bien joué) \n !dé : lance un dé \n !<reaction> : réagit d'une certaine manière (!aide reaction pour la liste) \n !action <Catégorie de l'action> : effectue une action de la catégorie choisie");
-            message.channel.send(embed); 
-            message.delete();
-        } 
-    }
-
-    if(command === 'fin')
-    {
-        message.channel.send({files : ['.\\gif\\end.jpg']});
-        message.channel.send("C'était vraiment le meilleur scénario du monde !! ");
-        message.delete();
-    }  */
-
-    
 });
 
 
