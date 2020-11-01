@@ -1,0 +1,13 @@
+{
+    "name": "lanoarbot",
+    "version": "1.0.0",
+    "description": "Un bot discord pour faire des rp très sympa ;)",
+    "main": "lanoar.js",
+    "scripts": {
+        "start": "node lanoar.js"
+    },
+    "author": "Tanguy Gimenez",
+    "dependencies": {
+        "discord.js": "^12.3.1"
+    }
+}
