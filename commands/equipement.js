@@ -8,7 +8,7 @@ module.exports =
     name: 'equipement',
     args: true,
     usage: `${prefix}equipement <action sur l'equipement> <type de l'item> <item> \nType d'item existant : arme, armure\nActions possibles : equip, unequip`,
-	description: 'Ping?',
+	description: 'Gère l\'équipement du bot',
     execute(message, args)
     {
         //s'il manque des arguments

@@ -23,13 +23,22 @@ module.exports =
 
         if(args[0] == 'show')
         {
-            let msgtxt = `Je suis armé d'un(e) ` + arme + `, j'ai un(e) ` + armure + ` et dans mon sac, j'ai : `;
-            
-            //on liste les items
-            for(const item of objets)
+            let msgtxt = `Je suis armé d'un(e) ` + arme + `, j'ai un(e) ` + armure + ` et dans mon sac, j'ai `;
+
+            if(objets.length > 0)
             {
-                msgtxt += '\n - un(e) ' + item;
+                //on liste les items
+                for(const item of objets)
+                {
+                    msgtxt += '\n - un(e) ' + item;
+                }
             }
+            else 
+            {
+                msgtxt += 'rien.'
+            }
+
+
 
             message.channel.send(msgtxt);
             message.delete();
