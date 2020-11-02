@@ -1,5 +1,10 @@
 #!/bin/sh
 
+#     Script de lancement pour le bot lanoar 
+#     Pour Linux, MacOS et BSD
+#     
+#     Auteur : Tanguy Gimenez
+
 
 #on check si nodejs est installé
 npm version 1>/dev/null 2>/dev/null
@@ -9,7 +14,7 @@ if [ $? != 0 ]
 then
     echo NPM ou Nodejs n\'est pas installé. Veuillez l\'installer sur https://nodejs.org/ ou avec votre gestionnaire de package habituel.
     echo Appuyez sur une touche pour quitter...
-    read 
+    read truc
     exit 1
 fi
 
@@ -68,4 +73,4 @@ fi
 
 #maintenant on lance le bot
 npm start
-pause
+read truc
