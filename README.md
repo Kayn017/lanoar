@@ -23,6 +23,10 @@ Tout les gifs sont contenues dans le dossier `gif`
 
 Téléchargez l'archive du bot puis extrayez la ou utilisez la commande `git clone git@github.com:Kayn017/lanoar.git`
 
+### Installation automatique
+Lancez le script `lanoar_windows.bat` ou `lanoar_linux.sh` en fonction de votre système d'exploitation.
+
+### Instalation manuelle 
 Ouvrez ensuite un terminale dans le dossier du bot puis tapez la commande `npm install` (node.js doit être installé)
 
 Pour configurer le bot, créez un fichier `config.json` à la racine avec ce pattern : 
@@ -36,5 +40,4 @@ Pour configurer le bot, créez un fichier `config.json` à la racine avec ce pat
 Ca y est, Lanoar est prêt à fonctionner !
 
 ## Lancement du bot
-
-Dans un terminal dans le dossier du bot, entrez la commande `npm start`.
+Lancez le script `lanoar_windows.bat` ou `lanoar_linux.sh` en fonction de votre système d'exploitation.

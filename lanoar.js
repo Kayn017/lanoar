@@ -29,7 +29,7 @@ for(const file of commandFiles)
 
 //EventListener pour la connexion du bot
 client.once('ready', () => {
-    console.log('Ready!');
+    console.log('Le bot est lancé!');
 });
 
 //connexion a discord
