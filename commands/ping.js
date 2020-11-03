@@ -1,4 +1,4 @@
-const { prefix } = require('../config.json');
+const { prefix } = require('../config/config.json');
 
 module.exports = 
 {
@@ -8,7 +8,7 @@ module.exports =
 	description: 'Ping?',
     execute(message, args)
     {
-        console.log("Pong.")
+        console.log("Pong.");
 		return message.channel.send('Pong.');
 	},
 };

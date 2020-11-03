@@ -1,4 +1,4 @@
-const { prefix } = require('../config.json');
+const { prefix } = require('../config/config.json');
 
 module.exports = 
 {
@@ -11,7 +11,7 @@ module.exports =
         const rnd = require("../library/getRandomInt.js");
 
         //déclaration des actions
-        const { actionCombat, actionSocial, actionAgilite, actionFouille} = require('../action.json');
+        const { actionCombat, actionSocial, actionAgilite, actionFouille} = require('../config/action.json');
         const action = actionCombat.concat(actionSocial).concat(actionAgilite).concat(actionFouille);
 
 

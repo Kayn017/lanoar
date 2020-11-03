@@ -2,11 +2,11 @@
 
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { prefix, token } = require('./config/config.json');
 
 
 //inventaire
-let { arme, armure, objets } = require('./inventaire.json');
+let { arme, armure, objets } = require('./config/inventaire.json');
 
 
 

@@ -32,7 +32,7 @@ node -v
 echo 
 
 #on check si config.json est deja present
-if [ ! -f config.json ]
+if [ ! -f config/config.json ]
 then 
     #si non, on créé un fichier config.json
     echo { > config.json
@@ -60,11 +60,12 @@ then
 
                 if [ $? != 0 ]
                 then
-                    vim config.json 2>/dev/null
+                    vi config.json 2>/dev/null
 
                     if [ $? != 0 ]
                     then
                         echo Impossible d\'ouvrir un éditeur de texte. Modifiez le à la main puis relancez ce script
+                        exit 2
                     fi
                 fi
             fi

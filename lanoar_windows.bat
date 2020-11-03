@@ -33,7 +33,7 @@ node -v
 echo.
 
 ::on créé un fichier config.json s'il n'existe pas
-IF NOT EXIST config.json (GOTO :creer_config) ELSE (echo Le fichier config.json est bien present & GOTO :lancerbot)
+IF NOT EXIST config/config.json (GOTO :creer_config) ELSE (echo Le fichier config.json est bien present & GOTO :lancerbot)
 
 
 ::on créé le fichier de config et on demande à l'utilisateur de le remplir

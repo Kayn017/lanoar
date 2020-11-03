@@ -1,7 +1,7 @@
-const { prefix } = require('../config.json');
+const { prefix } = require('../config/config.json');
 const wi = require('../library/writeInfo.js');
 
-let { arme, armure, objets } = require('../inventaire.json');
+let { arme, armure, objets } = require('../config/inventaire.json');
 
 module.exports = 
 {
@@ -119,14 +119,14 @@ module.exports =
         }
 
         //on écrit les infos dans le json de l'inv
-        wi.write(infos, './inventaire.json');
+        wi.write(infos, './config/inventaire.json');
     },
     refreshInv()
     {
         const fs = require('fs');
 
         //on lit le fichier et on le convertit en objet json
-        let fichier = fs.readFileSync("./inventaire.json");
+        let fichier = fs.readFileSync("./config/inventaire.json");
         let inv = JSON.parse(fichier)
 
         //on actualise les inventaires
