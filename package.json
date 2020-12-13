@@ -1,13 +1,18 @@
 {
     "name": "lanoarbot",
-    "version": "1.0.0",
+    "version": "1.0.18",
     "description": "Un bot discord pour faire des rp très sympa ;)",
     "main": "lanoar.js",
     "scripts": {
-        "start": "node lanoar.js"
+        "start": "node lanoar.js",
+        "postinstall": "node updater.js"
     },
     "homepage": "https://github.com/Kayn017/lanoar",
     "author": "Tanguy Gimenez",
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Kayn017/lanoar.git"
+    },
     "dependencies": {
         "discord.js": ">=12.4.1"
     }

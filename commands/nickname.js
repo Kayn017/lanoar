@@ -20,8 +20,9 @@ module.exports =
         } 
         else //sinon on le renomme comme il faut 
         {
-            message.channel.send(`Je m'appelle maintenant ${args[0]}`);
-            return message.guild.members.cache.get(message.client.user.id).setNickname(args[0]);
+			const newNickname = args.join(' ');
+            message.channel.send(`Je m'appelle maintenant ${newNickname}`);
+            return message.guild.members.cache.get(message.client.user.id).setNickname(newNickname);
         }
             
 	},
