@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'nickname',
     args: true,
-    usage: `${prefix}nickname <Nouveau surnom>`,
+    usage: `\`${prefix}nickname <Nouveau surnom>\` ou \`${prefix}nickname\` pour remettre le pseudo original du bot`,
 	description: 'Crée un nouveau surnom pour Lanoar',
     execute(message, args)
     {

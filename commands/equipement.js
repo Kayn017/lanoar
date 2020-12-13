@@ -7,7 +7,7 @@ module.exports =
 {
     name: 'equipement',
     args: true,
-    usage: `${prefix}equipement <action sur l'equipement> <type de l'item> <item> \nType d'item existant : arme, armure\nActions possibles : equip, unequip`,
+    usage: `\`${prefix}equipement <equip/unequip> <type de l'item> <item>\` \nType d'item existant : arme, armure`,
 	description: 'Gère l\'équipement du bot',
     execute(message, args)
     {

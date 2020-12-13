@@ -7,7 +7,7 @@ module.exports =
 {
     name: 'inv',
     args: true,
-    usage: `${prefix}inv <action sur l'inventaire> [<item>] \nActions possibles : show, add, remove, clear`,
+    usage: `\`${prefix}inv <action sur l'inventaire> [<item>]\` \nActions possibles : show, add, remove, clear`,
 	description: 'Tout ce qui concerne l\'inventaire de Lanoar',
     execute(message, args)
     {

@@ -5,7 +5,7 @@ module.exports =
 {
     name: 'changeavatar',
     args: true,
-    usage: `${prefix}changeavatar <Lien vers un avatar>`,
+    usage: `\`${prefix}changeavatar <Lien vers un avatar>\` ou \`${prefix}changeavatar default\` pour remettre la pdp par défaut`,
 	description: 'Change l\'avatar du bot',
     execute(message, args)
     {

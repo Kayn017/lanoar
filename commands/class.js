@@ -7,7 +7,7 @@ module.exports =
 {
     name: 'class',
     args: true,
-    usage: `${prefix}class <add/remove/see/delete> [<utilisateur>] [<nom de la classe>]`,
+    usage: `\`${prefix}class <add/remove/see/delete> [<utilisateur>] [<nom de la classe>]\``,
 	description: 'Affiche la classe de l\'utilisateur donné',
     execute(message, args)
     {

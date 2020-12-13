@@ -4,7 +4,7 @@ module.exports =
 {
     name: 'ping',
     args: false,
-    usage: `${prefix}ping`,
+    usage: `\`${prefix}ping\``,
 	description: 'Ping?',
     execute(message, args)
     {

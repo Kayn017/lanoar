@@ -5,7 +5,7 @@ module.exports =
     name: 'reaction',
     args: true,
     description: 'Lanoar réagit a un évenement',
-    usage: `${prefix}reaction <type de la reaction>\nType de reaction : angry, happy, rip`,
+    usage: `\`${prefix}reaction <type de la reaction>\`\nType de reaction : angry, happy, rip`,
     execute(message, args)
     {
         const fs = require('fs');

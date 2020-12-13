@@ -5,7 +5,7 @@ module.exports =
 {
     name: 'santa',
     args: false,
-    usage: `${prefix}santa`,
+    usage: `\`${prefix}santa\``,
 	description: 'Fait un pere noel surprise',
     async execute(message, args)
     {

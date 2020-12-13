@@ -5,7 +5,7 @@ module.exports =
     name: 'help',
     args: true,
     description: 'L\'aide de Lanoar',
-    usage: `${prefix}help [<nom de la commmande>]`,
+    usage: `\`${prefix}help [<nom de la commmande>]\``,
     execute(message, args)
     {
         const Discord = require('discord.js');
@@ -26,7 +26,7 @@ module.exports =
                 if(cmd.name == args[0])
                 {
                     desc += cmd.name + " : " + cmd.description + "\n";
-                    desc += "Synthaxe " + cmd.usage + "\n";
+                    desc += "Synthaxe : " + cmd.usage + "\n";
                 }
                 
             }
